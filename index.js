@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import path from "path";
 import cors from "cors";
 import { fileURLToPath } from "url";
+import Connection from "./database/db.js";
 import userRouter from "./routes/user.route.js";
 import categoryRouter from "./routes/category.route.js";
 import paymentRouter from "./routes/payment.route.js";
@@ -12,7 +13,6 @@ import orderRouter from "./routes/order.route.js";
 import refundRouter from "./routes/refund.route.js";
 import feedbackRouter from "./routes/feedback.route.js";
 import cardsRouter from "./routes/cards.route.js"
-import Connection from "./database/db.js";
 
 /********************************************/
 const app = express();
@@ -30,7 +30,6 @@ const __dirname = path.dirname(__filename); // Get directory name using import.m
 app.use("/", express.static(__dirname + "/public"));
 
 /*******************ROUTES******************/
-// using routes
 app.use("/user", userRouter);
 app.use("/category", categoryRouter);
 app.use("/payment", paymentRouter);
