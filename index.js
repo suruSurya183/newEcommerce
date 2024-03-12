@@ -13,6 +13,7 @@ import orderRouter from "./routes/order.route.js";
 import refundRouter from "./routes/refund.route.js";
 import feedbackRouter from "./routes/feedback.route.js";
 import cardsRouter from "./routes/cards.route.js"
+import ownerRouter from "./routes/owner.route.js"
 
 /********************************************/
 const app = express();
@@ -39,6 +40,7 @@ app.use("/order", orderRouter);
 app.use("/refund", refundRouter);
 app.use("/feedback", feedbackRouter);
 app.use("/cards", cardsRouter);
+app.use("/owner", ownerRouter);
 
 /*******************ROUTES******************/
 

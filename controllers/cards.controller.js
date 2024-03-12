@@ -6,6 +6,7 @@ import { validateCard, validateCardUpdate } from "../validators/cards.validators
 export async function insertCard(req, res) {
     try {
         const cardData = req.body;
+        console.log("cardData", cardData);
 
         // Validate card data before insertion
         const { error } = validateCard(cardData);

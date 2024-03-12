@@ -3,7 +3,7 @@ const router = express.Router();
 import * as cardsController from "../controllers/cards.controller.js"
 
 // POST request to insert a new card
-router.post('/', cardsController. insertCard);
+router.post('/',cardsController.insertCard);
 
 // GET request to display all card
 router.get('/',cardsController.showAllcard);

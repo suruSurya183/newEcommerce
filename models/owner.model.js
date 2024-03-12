@@ -2,10 +2,9 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const userSchema = Schema(
+const ownerSchema = Schema(
   {
-    userName: { type: String, required: true },
-    type: { type: String, enum: ['Super-Admin', 'Admin', 'Vendor', 'Customer', 'Staff'], default: 'Customer' },
+    ownerName: { type: String, required: true },
     contactNumber: { type: Number },
     address: {
       streetName: { type: String, required: false },
@@ -24,4 +23,4 @@ const userSchema = Schema(
   }
 );
 
-export default mongoose.model("User", userSchema);
+export default mongoose.model("Owner", ownerSchema);

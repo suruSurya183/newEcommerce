@@ -8,7 +8,7 @@ export function validateCard(cardData) {
     cardOwnerName: Joi.string().max(255).required(),
     expireDate: Joi.date().required(),
     CVC: Joi.string().max(20).required(),
-    userid: Joi.string().required() // Assuming userid is a string
+    userid: Joi.string().required(), // Assuming userid is a string
   });
   const { error } = cardsSchema.validate(cardData);
   if (error) {
@@ -26,7 +26,7 @@ export function validateCardUpdate(card) {
       cardOwnerName: Joi.string().max(255).optional(),
       expireDate: Joi.date().optional(),
       CVC: Joi.string().max(20).optional(),
-      userid: Joi.string().optional() // Assuming userid is a string
+      userid: Joi.string().optional(), // Assuming userid is a string
     });
   
     const { error } = cardSchema.validate(card);
