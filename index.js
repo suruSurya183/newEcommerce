@@ -11,7 +11,8 @@ import cartRouter from "./routes/cart.route.js";
 import orderRouter from "./routes/order.route.js";
 import refundRouter from "./routes/refund.route.js";
 import feedbackRouter from "./routes/feedback.route.js";
-import cardsRouter from "./routes/cards.route.js"
+import cardsRouter from "./routes/cards.route.js";
+import shippingRouter from "./routes/shipping.route.js";
 import Connection from "./database/db.js";
 
 /********************************************/
@@ -40,6 +41,8 @@ app.use("/order", orderRouter);
 app.use("/refund", refundRouter);
 app.use("/feedback", feedbackRouter);
 app.use("/cards", cardsRouter);
+app.use("/shipping", shippingRouter);
+
 
 /*******************ROUTES******************/
 
