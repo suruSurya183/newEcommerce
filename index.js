@@ -13,6 +13,7 @@ import refundRouter from "./routes/refund.route.js";
 import feedbackRouter from "./routes/feedback.route.js";
 import cardsRouter from "./routes/cards.route.js";
 import shippingRouter from "./routes/shipping.route.js";
+import trackingRouter from "./routes/tracking.route.js";
 import Connection from "./database/db.js";
 
 /********************************************/
@@ -42,6 +43,8 @@ app.use("/refund", refundRouter);
 app.use("/feedback", feedbackRouter);
 app.use("/cards", cardsRouter);
 app.use("/shipping", shippingRouter);
+app.use("/tracking", trackingRouter);
+
 
 
 /*******************ROUTES******************/

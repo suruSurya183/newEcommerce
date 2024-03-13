@@ -93,16 +93,16 @@ export async function showCards(req, res, next) {
 
 export async function showAllcard(req, res, next) {
     try {
-        // Find all payments
+        // Find all card
         const card = await Card.find();
 
-        // If no payments found or empty array returned
+        // If no card found or empty array returned
         if (!card || card.length === 0) {
-            console.log("No payments found");
-            return res.status(404).json({ message: "No Payments Found" });
+            console.log("No Card found");
+            return res.status(404).json({ message: "No Card Found" });
         }
 
-        // If payments found, send them in response
+        // If card found, send them in response
         res.status(200).json({ card });
     } catch (error) {
         // If any error occurs, send 500 status with error message
