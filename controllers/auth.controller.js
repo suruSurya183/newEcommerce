@@ -12,6 +12,7 @@ function generateToken() {
 export async function userLogin(req, res) {
     try {
         const { emailAddress, password } = req.body;
+        console.log(emailAddress);
 
         // Find user by email address
         const user = await UserModel.findOne({ emailAddress });
